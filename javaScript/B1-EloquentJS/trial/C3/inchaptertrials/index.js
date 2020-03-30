@@ -14,7 +14,7 @@ const scopetest = function(){
    var varScope = 30;
    console.log("value of let inside", letScope);
    console.log("value of var inside", varScope);
-}
+};
 scopetest();
 //console.log("value of let outside", letScope);
 //console.log("value of var outside", varScope);
@@ -27,4 +27,11 @@ if (true) {
   console.log(x + y + z);
 }
 console.log(x + z);
+
 //how did z get in scope at line 29. 
+//because stupid, you thoght/read/imgained the if(){}
+//to be a FUNCTION FUNCTION, thats why.
+//console.log(x + y + z); wont work as let is defined inside
+//the if block and that's the difference between var and let,
+//var can be used even outside the if block, but if that was 
+//a fucction it wouldn't have.
